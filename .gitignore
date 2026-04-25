@@ -1,0 +1,21 @@
+# Terraform state files
+.terraform/
+.terraform.lock.hcl
+tfplan-local
+tfplan-prod
+*.tfstate
+*.tfstate.backup
+
+# Secrets / sensitive tfvars
+*.secret.tfvars
+secrets/
+
+# Local model registry (populated at runtime)
+/tmp/recs-model-registry/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
