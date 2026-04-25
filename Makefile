@@ -1,5 +1,8 @@
 .PHONY: init fmt validate plan-local apply-local destroy-local plan-prod apply-prod logs-training logs-serving ps clean help
 
+# Bypass malformed ~/.netrc that blocks provider downloads
+export NETRC=/dev/null
+
 TF      = terraform
 ENVS    = envs
 LOCAL   = $(ENVS)/local.tfvars

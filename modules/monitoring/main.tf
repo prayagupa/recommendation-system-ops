@@ -11,7 +11,10 @@ variable "docker_network_name"    { default = "" }
 variable "prometheus_port"        { default = 9090 }
 variable "grafana_port"           { default = 3000 }
 variable "grafana_admin_password" { default = "admin" }
-variable "scrape_targets"         { type = list(string); default = [] }
+variable "scrape_targets" {
+  type    = list(string)
+  default = []
+}
 variable "gcp_project_id"         { default = "" }
 
 locals {
